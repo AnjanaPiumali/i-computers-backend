@@ -1,6 +1,5 @@
 import express, { application } from 'express'
 import mongoose from 'mongoose'
-import studentRouter from './routes/studentRouter.js'
 import userRouter from './routes/userRouter.js'
 import authenticateUser from './middlewares/authenticate.js'
 import productRouter from './routes/productRouter.js'
@@ -19,7 +18,7 @@ app.use(express.json())
 
 app.use(authenticateUser)
 
-app.use("/students",studentRouter)
+
 app.use("/users",userRouter)
 app.use("/products",productRouter)
 
